@@ -1,0 +1,12 @@
+public class Main {
+    static void main(String[] args) {
+        ProductionLine productionLine = new ProductionLine();
+        Product p1 = new Product("Sp01", "Bàn phím", 5000000);
+        Product p2 = new Product("Sp-02", "Chuột", 3000000);
+        Product p3 =new Product("SP-03", "Mainboard Sever", 5000000);
+        productionLine.addNormalPriority(p1);
+        productionLine.addNormalPriority(p2);
+        productionLine.addHihghPriority(p3);
+        productionLine.displayProductionLine();
+    }
+}
