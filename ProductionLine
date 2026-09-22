@@ -1,0 +1,26 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class ProductionLine {
+    private LinkedList<Product> products= new LinkedList<>();
+    public void addHihghPriority(Product p){
+        products.addFirst(p);
+    }
+    public void addNormalPriority(Product p){
+        products.addLast(p);
+    }
+    public void displayProductionLine(){
+        System.out.println("DÂY CHUYỀN SẢN XUẤT LINKEDLIST");
+        Iterator<Product> it = products.iterator();
+        int index = 1;
+        while (it.hasNext()){
+            Product p = it.next();
+            if(index == 1){
+                System.out.printf("[Thứ tự %d - Ưu tiên] %-5s | %-20s | \n", index, p.getId(), p.getName());
+            }else{
+                System.out.printf("[Thú tự %d - Thưởng] %-5s | %-20s | \n", index, p.getId(), p.getName());
+            }
+            index ++;
+        }
+    }
+}
